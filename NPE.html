@@ -3,20 +3,58 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-   <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+   <link rel="stylesheet" href="https://cdn.tailwindcss.com">
+    <script>
+
+    tailwind.config = {
+        theme: {
+            extend: {
+                // You can extend colors or fonts here if needed
+            }
+        },
+        plugins: [
+            function ({ addUtilities }) {
+                addUtilities({
+                    '.no-spinner::-webkit-inner-spin-button': {
+                        '-webkit-appearance': 'none',
+                        'margin': '0',
+                    },
+                    '.no-spinner::-webkit-outer-spin-button': {
+                        '-webkit-appearance': 'none',
+                        'margin': '0',
+                    },
+                    '.no-spinner': {
+                        '-moz-appearance': 'textfield',
+                    },
+                })
+            }
+        ],
+    }
+    </script>
     <title>National Parliament Election</title>
+    
 </head>
+
 <body>
     <h1 class="bg-blue-500 text-white p-4 text-center text-2xl font-bold">National Parliament Election</h1>
-    <span>
+    <span class="block text-gray-700 text-lg mt-4 mb-2 text-center">
     Please enter your NID number to check your seat and vote booth location:
     </span>
     <br>
+    <div class="flex flex-col items-center ">
+   
 
-    <input type="number" name="NID_no" placeholder="Enter your NID number" id="NID_number" required style=""">
-    <button type="submit">Check Your Seat and Vote Booth Location
+        <input class=" no spinner border-black text-center font-bold text-black w-1/2 border-2 bg-white border-blue rounded px-4 py-2 mb-2 mt-4 mx-2" type="number" name="NID_no" placeholder="Enter your NID number" id="NID_number"   required>
 
-    </button> 
+        <button 
+        type="submit" 
+        class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">
+        
+        Check Your Seat and Vote Booth Location
+
+        </button> 
+    </div>
+    
 
 </body>
 </html>
