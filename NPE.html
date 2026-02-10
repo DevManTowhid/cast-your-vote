@@ -3,34 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-   <link rel="stylesheet" href="https://cdn.tailwindcss.com">
-    <script>
-
-    tailwind.config = {
-        theme: {
-            extend: {
-                // You can extend colors or fonts here if needed
-            }
-        },
-        plugins: [
-            function ({ addUtilities }) {
-                addUtilities({
-                    '.no-spinner::-webkit-inner-spin-button': {
-                        '-webkit-appearance': 'none',
-                        'margin': '0',
-                    },
-                    '.no-spinner::-webkit-outer-spin-button': {
-                        '-webkit-appearance': 'none',
-                        'margin': '0',
-                    },
-                    '.no-spinner': {
-                        '-moz-appearance': 'textfield',
-                    },
-                })
-            }
-        ],
-    }
-    </script>
+   <script src="https://cdn.tailwindcss.com"></script>
+    
     <title>National Parliament Election</title>
     
 </head>
@@ -47,7 +21,8 @@
         <input class=" no spinner border-black text-center font-bold text-black w-1/2 border-2 bg-white border-blue rounded px-4 py-2 mb-2 mt-4 mx-2" type="number" name="NID_no" placeholder="Enter your NID number" id="NID_number"   required>
 
         <button 
-        type="submit" 
+        type="submit"
+        onclick="window.location.href='your_seat.html';" 
         class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">
         
         Check Your Seat and Vote Booth Location

@@ -3,64 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="https://cdn.tailwindcss.com">
-    <script>
-
-    tailwind.config = {
-        theme: {
-            extend: {
-                // You can extend colors or fonts here if needed
-            }
-        },
-        plugins: [
-            function ({ addUtilities }) {
-                addUtilities({
-                    '.no-spinner::-webkit-inner-spin-button': {
-                        '-webkit-appearance': 'none',
-                        'margin': '0',
-                    },
-                    '.no-spinner::-webkit-outer-spin-button': {
-                        '-webkit-appearance': 'none',
-                        'margin': '0',
-                    },
-                    '.no-spinner': {
-                        '-moz-appearance': 'textfield',
-                    },
-                })
-            }
-        ],
-    }
-    </script>
+    <script src="https://cdn.tailwindcss.com"></script>
+    
     <title>Cast Your Vote</title>
 </head>
 <body>
-    <script src="https://cdn.tailwindcss.com"></script>
-<script>
-  tailwind.config = {
-    theme: {
-      extend: {
-        // You can extend colors or fonts here if needed
-      }
-    },
-    plugins: [
-      function ({ addUtilities }) {
-        addUtilities({
-          '.no-spinner::-webkit-inner-spin-button': {
-            '-webkit-appearance': 'none',
-            'margin': '0',
-          },
-          '.no-spinner::-webkit-outer-spin-button': {
-            '-webkit-appearance': 'none',
-            'margin': '0',
-          },
-          '.no-spinner': {
-            '-moz-appearance': 'textfield',
-          },
-        })
-      }
-    ],
-  }
-</script>
+
+
     <h1>Choose the Election</h1>
     <button onclick="window.location.href='NPE.html'"> National Parliament Election </button>
     <!-- <input type="number" id="NID_no" placeholder="Enter your NID number">
